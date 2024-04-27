@@ -19,20 +19,38 @@
       </div>
 
       <div class="title">
-        <h1 class="title__h1">Рандомайзер Сплинта</h1>
-        <h2 class="title__h2">Кто же пойдёт на Баллы?</h2>
+        <h1 class="title__h1">Админка Сплита</h1>
+        <h2 class="title__h2">Совершенно секретно*</h2>
       </div>
     </div>
 
     <!-- main -->
     <div class="splint">
-      <p class="splint__uid">Выбор пользователя</p>
-      <input id="myInput" placeholder=" uid или телефон">
-      <button id="myBtn" onclick="javascript:alert('Пользователь выбран 😎 ')"> Ok </button>
+      <!-- Поиск юзера 1 -->
+      <div class="splint__one">
+        <p class="splint__uid">Выбрать пользователя: </p>
+        <input id="myInput" placeholder=" uid или телефон">
+        <button id="myBtn" onclick="javascript:alert('Пользователь выбран 😎 ')"> Найти </button>
+      </div>
 
-      <!-- slider -->
-      <input type="range" min="0" max="150000" value="75000" class="slider" id="myRange">
+      <!-- Выключатель доступности 2 -->
+      <div class="splint__two">
+        <!-- Rounded switch -->
+        <p class="splint__two_p">Доступность Сплита </p>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="toggle round"></span>
+        </label>
+      </div>
+
+      <!-- Регулятор лимита -->
+      <div class="splint__threee">
+        <!-- slider -->
+        <p class="splint__threee_p">Регулятор лимита </p>
+        <input type="range" min="0" max="150000" value="75000" class="slider" id="myRange">
+      </div>
       <p class="splint__limit">Баланс Сплита: <span id="demo"></span></p>
+
     </div>
   </section>
 
