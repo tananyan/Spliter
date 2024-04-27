@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сплитанём немножечко?</title>
+  <link rel="icon" type="image/gif/png" href="./icon.png">
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <section>
+    <!-- header -->
+    <div class="section">
+      <div class="logo">
+        <img src="./img/split1.png" alt="split">
+      </div>
+
+      <div class="title">
+        <h1 class="title__h1">Рандомайзер Сплинта</h1>
+        <h2 class="title__h2">Кто же пойдёт на Баллы?</h2>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="splint">
+      <p class="splint__uid">Выбор пользователя</p>
+      <input id="myInput" placeholder=" uid или телефон">
+      <button id="myBtn" onclick="javascript:alert('Пользователь выбран 😎 ')"> Ok </button>
+
+      <!-- slider -->
+      <input type="range" min="0" max="150000" value="75000" class="slider" id="myRange">
+      <p class="splint__limit">Баланс Сплита: <span id="demo"></span></p>
+    </div>
+  </section>
+
+
+
+  <script>
+    // slider
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+      output.innerHTML = this.value;
+    }
+
+
+    // form 
+    var input = document.getElementById("myInput");
+
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+      }
+    });
+  </script>
+
+  <!-- <script src="./script.js"></script> -->
+</body>
+
+</html>
