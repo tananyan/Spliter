@@ -59,7 +59,7 @@
       <div class="splint__threee">
         <!-- slider -->
         <p class="splint__threee_p">Регулятор лимита </p>
-        <input type="range" min="0" max="150000" value="75000" class="slider" id="myRange">
+        <input type="range" min="0" max="150000" step="1000" value="75000" class="slider" id="myRange">
       </div>
 
       <p class="splint__limit">Баланс Сплита: <span id="demo"></span></p>
@@ -81,7 +81,7 @@
     output.innerHTML = slider.value;
 
     slider.oninput = function () {
-      output.innerHTML = this.value;
+      output.innerHTML = Math.round(this.value);
     }
 
 
