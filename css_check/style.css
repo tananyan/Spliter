@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap");
 * {
   margin: 0;
@@ -19,13 +20,15 @@ section {
   /* Rounded sliders */
 }
 section .section {
-  padding: 25px 250px;
-  height: 330px;
+  padding: 0 100px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1000px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -51,7 +54,9 @@ section .section .title__h2 {
   text-align: right;
 }
 section .splint {
-  padding: 50px 300px;
+  padding: 50px 100px;
+  margin: 0 auto;
+  width: 1000px;
 }
 section .splint__one {
   display: -webkit-box;
@@ -65,7 +70,18 @@ section .splint__one {
           align-items: center;
 }
 section .splint__two {
-  margin-top: 25px;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section .splint__two_switch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,10 +93,10 @@ section .splint__two {
           align-items: center;
 }
 section .splint__two_p {
-  margin-right: 15px;
+  margin-right: 5px;
+  min-width: 200px;
 }
-section .splint__threee {
-  margin-top: 25px;
+section .splint__two_switch2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,11 +107,36 @@ section .splint__threee {
       -ms-flex-align: center;
           align-items: center;
 }
-section .splint__threee_p {
+section .splint__two_p2 {
   margin-right: 15px;
+  min-width: 200px;
+}
+section .splint__threee {
+  margin-top: 25px;
+  padding: 0 25px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section .splint__threee_p {
+  min-width: 200px;
+}
+section .splint__save {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 section .splint__uid {
-  margin-right: 10px;
+  margin: 0 10px;
   font-size: 30px;
 }
 section .splint #myInput {
@@ -105,33 +146,58 @@ section .splint #myInput {
 }
 section .splint #myBtn {
   font-size: 30px;
-  padding: 0 15px;
+  padding: 0 20px;
   background-color: #1da25f;
   color: #ffffff;
   cursor: pointer;
-  border: solid #1da25f;
-  opacity: 0.85;
+  border: 3px solid #1da25f;
+  border-radius: 34px;
   -webkit-transition: 0.2s;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 section .splint #myBtn:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
-section .splint .slider {
-  -webkit-appearance: none;
-  width: 50%;
-  height: 30px;
+section .splint #myBtnSave {
+  font-size: 30px;
+  padding: 0 20px;
+  background-color: #1da25f;
+  color: #ffffff;
+  cursor: pointer;
+  border: 3px solid #1da25f;
   border-radius: 34px;
-  background: #1da25f;
-  outline: none;
-  opacity: 0.85;
   -webkit-transition: 0.2s;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
+section .splint #myBtnSave:hover {
+  opacity: 0.8;
+}
+section .splint .slider {
+  -webkit-appearance: none;
+  width: 550px;
+  height: 30px;
+  border-radius: 34px;
+  background: #1da25f;
+  outline: none;
+  -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  position: relative;
+}
+section .splint .slider::before {
+  content: "0";
+  position: absolute;
+  left: -25px;
+}
+section .splint .slider::after {
+  content: "∞";
+  position: absolute;
+  right: -25px;
+}
 section .splint .slider:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 section .splint .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -152,7 +218,7 @@ section .splint .slider::-moz-range-thumb {
   cursor: pointer;
 }
 section .splint__limit {
-  margin-top: 25px;
+  margin-top: 50px;
   font-size: 45px;
   font-weight: bold;
   color: #1da25f;
@@ -166,13 +232,12 @@ section .switch {
   display: inline-block;
   width: 60px;
   height: 34px;
-  opacity: 0.85;
   -webkit-transition: 0.2s;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 section .switch:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 section .switch input {
   opacity: 0;

@@ -20,10 +20,11 @@ section {
   padding: 5px 100px;
 
   .section {
-    padding: 25px 250px;
-    height: 330px;
+    padding: 0 100px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 1000px;
     align-items: center;
     height: 300px;
 
@@ -49,7 +50,9 @@ section {
   }
 
   .splint {
-    padding: 50px 300px;
+    padding: 50px 100px;
+    margin: 0 auto;
+    width: 1000px;
 
     // 1
     &__one {
@@ -60,31 +63,53 @@ section {
 
     // 2
     &__two {
-      margin-top: 25px;
+      margin-top: 50px;
       display: flex;
-      justify-content: start;
+      justify-content: space-between;
       align-items: center;
 
+      &_switch {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
       &_p {
+        margin-right: 5px;
+        min-width: 200px;
+      }
+
+      &_switch2 {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      &_p2 {
         margin-right: 15px;
+        min-width: 200px;
       }
     }
 
     // 3
     &__threee {
       margin-top: 25px;
+      padding: 0 25px 0 0;
       display: flex;
-      justify-content: start;
+      justify-content: space-between;
       align-items: center;
 
       &_p {
-        margin-right: 15px;
+        min-width: 200px;
       }
+    }
+
+    &__save {
+      display: flex;
+      justify-content: right;
     }
 
     //
     &__uid {
-      margin-right: 10px;
+      margin: 0 10px;
       font-size: 30px;
     }
 
@@ -96,33 +121,60 @@ section {
 
     #myBtn {
       font-size: 30px;
-      padding: 0 15px;
+      padding: 0 20px;
       background-color: #1da25f;
       color: #ffffff;
       cursor: pointer;
-      border: solid #1da25f;
-      opacity: 0.85;
+      border: 3px solid #1da25f;
+      border-radius: 34px;
       -webkit-transition: 0.2s;
       transition: opacity 0.2s;
 
       &:hover {
-        opacity: 1;
+        opacity: 0.8;
+      }
+    }
+
+    #myBtnSave {
+      font-size: 30px;
+      padding: 0 20px;
+      background-color: #1da25f;
+      color: #ffffff;
+      cursor: pointer;
+      border: 3px solid #1da25f;
+      border-radius: 34px;
+      -webkit-transition: 0.2s;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.8;
       }
     }
 
     .slider {
       -webkit-appearance: none;
-      width: 50%;
+      width: 550px;
       height: 30px;
       border-radius: 34px;
       background: #1da25f;
       outline: none;
-      opacity: 0.85;
       -webkit-transition: 0.2s;
       transition: opacity 0.2s;
+      position: relative;
+
+      &::before {
+        content: "0";
+        position: absolute;
+        left: -25px;
+      }
+      &::after {
+        content: "∞";
+        position: absolute;
+        right: -25px;
+      }
 
       &:hover {
-        opacity: 1;
+        opacity: 0.8;
       }
 
       &::-webkit-slider-thumb {
@@ -147,7 +199,7 @@ section {
     }
 
     &__limit {
-      margin-top: 25px;
+      margin-top: 50px;
       font-size: 45px;
       font-weight: bold;
       color: #1da25f;
@@ -165,12 +217,11 @@ section {
     width: 60px;
     height: 34px;
 
-    opacity: 0.85;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.8;
     }
 
     input {

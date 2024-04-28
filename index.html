@@ -35,13 +35,25 @@
 
       <!-- Выключатель доступности 2 -->
       <div class="splint__two">
-        <!-- Rounded switch -->
-        <p class="splint__two_p">Доступность Сплита </p>
-        <label class="switch">
-          <input type="checkbox" checked>
-          <span class="toggle round"></span>
-        </label>
+        <!-- switch -->
+        <div class="splint__two_switch">
+          <p class="splint__two_p">Доступность Сплита </p>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="toggle round"></span>
+          </label>
+        </div>
+
+        <!-- 2 switch-->
+        <div class="splint__two_switch2">
+          <p class="splint__two_p2">Комиссия за длинный период </p>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="toggle round"></span>
+          </label>
+        </div>
       </div>
+
 
       <!-- Регулятор лимита -->
       <div class="splint__threee">
@@ -49,7 +61,13 @@
         <p class="splint__threee_p">Регулятор лимита </p>
         <input type="range" min="0" max="150000" value="75000" class="slider" id="myRange">
       </div>
+
       <p class="splint__limit">Баланс Сплита: <span id="demo"></span></p>
+
+      <!-- Сохранить -->
+      <div class="splint__save">
+        <button id="myBtnSave" onclick="javascript:alert('Настройки применены ')"> Сохранить </button>
+      </div>
 
     </div>
   </section>
